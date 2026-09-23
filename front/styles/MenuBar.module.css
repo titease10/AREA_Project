@@ -1,0 +1,67 @@
+.menuOpen {
+    position: fixed;
+    right: 0; /* Start from the right edge */
+    top: 0px; /* Add this line */
+    width: 45%;
+    height: 100vmax;
+    background-color: #333333;
+    transition: right 0.3s ease-in-out;
+    box-sizing: border-box;
+    border-top-left-radius: 10px; /* Adjust as needed */
+    border-bottom-left-radius: 10px; /* Adjust as needed */
+    z-index: 2; /* Ensure the menu bar is above the overlay */
+}
+
+.button {
+    display: block;
+    width: 80%;
+    height: 0.5vh;
+    margin: 0.5vh auto;
+    font-size: 30px;
+    text-align: left; /* Align text to the left */
+    font-weight: bold; /* Make text bold */
+    font-family: 'Roboto', sans-serif; /* Change font to Roboto */
+}
+
+.button:first-of-type {
+    margin-top: 7vh; /* Adjust this value to create the desired distance */
+}
+
+.menuClose {
+    position: fixed;
+    right: -45%; /* Hide completely to the right */
+    top: 0px; /* Add this line */
+    width: 45%;
+    height: 100vmax; /* Full height */
+    background-color: #333333;
+    transition: right 0.3s ease-in-out;
+    box-sizing: border-box; /* Include padding and border in height/width */
+    border-top-left-radius: 10px; /* Adjust as needed */
+    border-bottom-left-radius: 10px; /* Adjust as needed */
+    z-index: 2; /* Ensure the menu bar is above the overlay */
+
+}
+
+.closeIcon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    cursor: pointer;
+    color: white; /* Make the icon white */
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the last value for transparency */
+    z-index: 1; /* Ensure the overlay is below the menu bar */
+    display: none; /* Hide by default */
+}
+
+.overlayOpen {
+    display: block; /* Show when the menu is open */
+}

@@ -1,0 +1,268 @@
+{
+  "client": {
+    "host": "http://localhost:8080"
+  },
+  "server": {
+    "current_time": 1705267613,
+    "services": [
+      {
+        "name": "twitter",
+        "actions": [
+          {
+            "name": "Donothings This",
+            "description": "Description for Donothings This: This will tweet a message, enter the message in the field below"
+          }
+        ],
+        "reactions": [
+          {
+            "name": "Tweet This",
+            "description": "Description for Tweet This: This will tweet a message, enter the message in the field below"
+          },
+          {
+            "name": "Tweet This With Querry",
+            "description": "Description for Tweet This With Querry: This will tweet a message, enter the message in the field below"
+          }
+        ]
+      },
+      {
+        "name": "spotify",
+        "actions": [
+          {
+            "name": "Check Playlists",
+            "description": "Description for Check Playlists: Check if changes were made to a selected playlist"
+          },
+          {
+            "name": "Get Recently Played",
+            "description": "Description for Get Recently Played: Get recently played tracks"
+          },
+          {
+            "name": "Compare Saved Album",
+            "description": "Description for Compare Saved Album: Compare the number of saved albums"
+          },
+          {
+            "name": "New Saved Episode",
+            "description": "Description for New Saved Episode: Check if a new episode has been saved"
+          },
+          {
+            "name": "Compare Saved Show",
+            "description": "Description for Compare Saved Show: Compare the number of saved shows"
+          },
+          {
+            "name": "New Saved Track",
+            "description": "Description for New Saved Track: Check if a new track has been saved"
+          },
+          {
+            "name": "New Episode From Followed Show",
+            "description": "Description for New Episode From Followed Show: Check if a new episode has been released from a followed show"
+          }
+        ],
+        "reactions": [
+          {
+            "name": "Play Track",
+            "description": "Description for Play Track: Play a track on Spotify, be sure to provide the track name"
+          },
+          {
+            "name": "Skip Track",
+            "description": "Description for Skip Track: Skip the current track"
+          }
+        ]
+      },
+      {
+        "name": "google",
+        "actions": [
+          {
+            "name": "New Liked Video",
+            "description": "Description for New Liked Video: Check if there are new liked videos on YouTube"
+          },
+          {
+            "name": "New Video By Channel",
+            "description": "Description for New Video By Channel: Check if there are new videos uploaded by a channel on YouTube (enter the channel ID in the field below)"
+          },
+          {
+            "name": "Compare User Playlists",
+            "description": "Description for Compare User Playlists: Check if there are new playlists on YouTube"
+          },
+          {
+            "name": "New Follower",
+            "description": "Description for New Follower: Check if there are new subscribers on YouTube"
+          },
+          {
+            "name": "New Video From Search",
+            "description": "Description for New Video From Search: Check if there are new videos on YouTube based on a search query (enter the search query in the field below)"
+          }
+        ],
+        "reactions": [
+          {
+            "name": "Compare User Playlists",
+            "description": "Description for Compare User Playlists: Check if there are new playlists on YouTube"
+          }
+        ]
+      },
+      {
+        "name": "discord",
+        "actions": [
+          {
+            "name": "New message on channel",
+            "description": "Description for New message on channel: Triggers when a new message is sent on the selected channel"
+          },
+          {
+            "name": "New pinned message on channel",
+            "description": "Description for New pinned message on channel: Triggers when a new message is pinned on the selected channel"
+          }
+        ],
+        "reactions": [
+          {
+            "name": "Post Message",
+            "description": "Description for Post Message: Post a message on the selected channel, select a query to add data to the message"
+          }
+        ]
+      },
+      {
+        "name": "openweathermap",
+        "actions": [
+          {
+            "name": "Compare Weather",
+            "description": "Description for Compare Weather: Compare the weather of a city with a given weather"
+          }
+        ],
+        "reactions": []
+      },
+      {
+        "name": "github",
+        "actions": [
+          {
+            "name": "New Commit for a specific repository",
+            "description": "Description for New Commit for a specific repository: Check if there are new commits for a specific repository, enter the repository name in the field below"
+          },
+          {
+            "name": "New Repository Event for a specific repository",
+            "description": "Description for New Repository Event for a specific repository: Check if there are new events for a specific repository, enter the repository name in the field below"
+          },
+          {
+            "name": "New Release for a specific repository",
+            "description": "Description for New Release for a specific repository: Check if there are new releases for a specific repository, enter the repository name in the field below"
+          },
+          {
+            "name": "New repository by a specific username or organization\n",
+            "description": "Description for New repository by a specific username or organization\n: Check if there are new repositories for a specific username or organization, enter the username or organization name in the field below"
+          }
+        ],
+        "reactions": [
+          {
+            "name": "devTest",
+            "description": "Description for devTest: This will test a query, enter the query name in the field below"
+          }
+        ]
+      },
+      {
+        "name": "facebook",
+        "actions": [
+          {
+            "name": "didYouChangeFirstName?",
+            "description": "Description for didYouChangeFirstName?: This will check if you changed your first name"
+          },
+          {
+            "name": "didYouChangeSecondName?",
+            "description": "Description for didYouChangeSecondName?: This will check if you changed your second name"
+          }
+        ],
+        "reactions": []
+      },
+      {
+        "name": "microsoft",
+        "actions": [
+          {
+            "name": "didYouChangeDisplayName?",
+            "description": "Description for didYouChangeDisplayName?: Check if you changed your display name"
+          },
+          {
+            "name": "CheckCalendarEventForToday",
+            "description": "Description for CheckCalendarEventForToday: Check if there is a calendar event scheduled for today"
+          },
+          {
+            "name": "checkNewCalendarEvent?",
+            "description": "Description for checkNewCalendarEvent?: Check if you changed your display name"
+          }
+        ],
+        "reactions": [
+          {
+            "name": "Create Calendar Event",
+            "description": "Description for Create Calendar Event: Create an event in the Outlook calendar"
+          }
+        ]
+      },
+      {
+        "name": "timeio",
+        "actions": [
+          {
+            "name": "Compare Time",
+            "description": "Description for Compare Time: Compare the time with a given time, be aware that the time is in UTC. enter the city and the zone in the fields below"
+          },
+          {
+            "name": "does we have not reached the time",
+            "description": "Description for does we have not reached the time: Compare the time with a given time, be aware that the time is in UTC. enter the city and the zone in the fields below"
+          },
+          {
+            "name": "does we have reached the time",
+            "description": "Description for does we have reached the time: Compare the time with a given time, be aware that the time is in UTC. enter the city and the zone in the fields below"
+          }
+        ],
+        "reactions": []
+      },
+      {
+        "name": "leagueoflegends",
+        "actions": [
+          {
+            "name": "Did i finish a new game?",
+            "description": "Description for Did i finish a new game?: Check if you finished a new game, enter your name in the field below"
+          },
+          {
+            "name": "did I make enought kill?",
+            "description": "Description for did I make enought kill?: Check if you made enought kill in your last game, enter your name in the field below and your objective kill"
+          },
+          {
+            "name": "did I played this champion?",
+            "description": "Description for did I played this champion?: Check if you played this champion in your last game, enter your name in the field below and select your champion"
+          },
+          {
+            "name": "did I Win?",
+            "description": "Description for did I Win?: Check if you won your last game, enter your name in the field below"
+          }
+        ],
+        "reactions": []
+      },
+      {
+        "name": "mailgun",
+        "actions": [],
+        "reactions": [
+          {
+            "name": "Send Multiple Mail With Query",
+            "description": "Description for Send Multiple Mail With Query: Send an email to multiple people with a query result, separate the email with a comma"
+          },
+          {
+            "name": "Send Mail To Multiple Receiveer",
+            "description": "Description for Send Mail To Multiple Receiveer: Send an email to multiple people, separate the email with a comma"
+          },
+          {
+            "name": "Send Unique Mail",
+            "description": "Description for Send Unique Mail: Send an email to a specific person"
+          },
+          {
+            "name": "Send Unique Mail With Query",
+            "description": "Description for Send Unique Mail With Query: Send an email to a specific person with a query result"
+          }
+        ]
+      },
+      {
+        "name": "airQuality",
+        "actions": [
+          {
+            "name": "Check Air Quality",
+            "description": "Description for Check Air Quality: Check if the air quality is higher than a selected threshold"
+          }
+        ],
+        "reactions": []
+      }
+    ]
+  }
+}

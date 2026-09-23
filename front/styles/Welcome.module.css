@@ -1,0 +1,54 @@
+.post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.buttonContainer > * {
+    flex: 0 0 150px;
+    margin: 5px;
+    text-align: center;
+    z-index: 1;
+}
+
+.bg_circle {
+    position: absolute;
+    top: -35vw;
+    right: -15vw;
+    width: 99vw;
+    height: 76vw;
+    background-color: black;
+    border-radius: 50%;
+    z-index: 0;
+    background-image: url('../public/login-bg.png');
+    background-size: cover;
+}
+
+.sliderContainer {
+    margin-top: 5vw;
+    margin-left: 53%;
+    width: 300px;;
+}
+
+.textSlider {
+    margin-top: 1vw;
+    margin-left: 20%;
+    color: #fcfcfc;
+    align-items: flex-end;
+}

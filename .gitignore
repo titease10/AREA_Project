@@ -1,3 +1,30 @@
+# Secrets / environment files
+.env
+.env.*
+!.env.example
+
+back/.env
+mobile/.env
+front/.env
+
+# Archives
+*.rar
+*.zip
+
+# Dependencies
+node_modules/
+
+# Build
+dist/
+build/
+coverage/
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+
 node_modules/
 front/node_modules/
 back/node_modules/
@@ -7,3 +34,47 @@ back/.env/
 qodana.yaml
 backend/.env
 !/front/package-lock.json
+
+
+# Dependencies
+node_modules/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Backend
+back/.env
+back/.env.*
+
+# Mobile
+mobile/.env
+mobile/.env.*
+
+# Frontend
+front/.env
+front/.env.*
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+
+# Logs
+*.log
+
+# Build / generated files
+dist/
+build/
+coverage/
+
+# Archives / local backups
+*.rar
+*.zip
+
+# Temporary files
+*.tmp
+*.bak

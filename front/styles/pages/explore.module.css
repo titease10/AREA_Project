@@ -1,0 +1,77 @@
+.body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.title {
+    font-size: 70px;
+    color: white;
+    font-family: 'Roboto';
+    font-weight: bold;
+    text-align: center; /* Center the title */
+    margin-bottom: 1vh;
+}
+
+.centeredContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+
+.min-h-screen {
+    min-height: 100vh;
+}
+
+.barba-container {
+    position: relative;
+    width: 100vw;
+}
+
+.provider-grid {
+    margin-top: 2vh;
+    display: grid; /* Use CSS Grid instead of Flexbox */
+    grid-template-columns: repeat(2, 1fr); /* Create two columns */
+    gap: 1rem; /* Add gap between items */
+}
+
+.button {
+    display: flex;
+    flex-direction: column; /* Stack the items vertically */
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* The width will be controlled by the grid */
+    max-width: 900px; /* Set a maximum width */
+    min-width: 200px; /* Set a minimum width */
+    height: 12vh;
+    max-height: 300px; /* Set a maximum height */
+    min-height: 50px; /* Set a minimum height */
+    border-radius: 15px;
+    border: none;
+    color: white;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 3.5vh;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 10px;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+.providerIcon {
+    width: '30px';
+    height: 'auto';
+}
+
+/* Adjust the layout for smaller screens */
+@media (max-width: 600px) {
+    .provider-grid {
+        grid-template-columns: 1fr; /* Create one column on small screens */
+    }
+}

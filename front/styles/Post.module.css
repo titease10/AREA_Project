@@ -1,0 +1,51 @@
+/* Post.module.css */
+.post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.centeredContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.image {
+    margin: 0 auto;
+    width: auto;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+}
+
+.buttonContainer > * {
+    flex: 0 0 150px; /* Fixed width in pixels for each button */
+    margin: 5px; /* Adjust margin as needed */
+    text-align: center; /* Optional, for text alignment */
+}
+
+.buttonContainer > :only-child {
+    margin-left: auto; /* Center the single button horizontally */
+    margin-right: auto;
+}
+
+
+
+

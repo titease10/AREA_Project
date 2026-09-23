@@ -1,0 +1,157 @@
+.body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.descriptionBody {
+    display: grid;
+    align-items: center;
+    width: 70vw;
+    max-width: 700px;
+    background: #222222;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 20px;
+    margin: 5px;
+}
+
+.container {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.spotifyIcon {
+    font-size: 8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    width: 70vw;
+    max-width: 700px;
+    font-size: 25px;
+    font-weight: bold;
+    border: 1px solid white;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-size: 50px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.description {
+    font-size: 20px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.providerBody {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.providerBody.spotify {
+    background-color: #1DB954;
+}
+
+.providerBody.discord {
+    background-color: #7289da;
+}
+
+.providerBody.google {
+    background-color: #db4437;
+}
+
+.providerBody.twitter {
+    background-color: #1da1f2;
+}
+
+.providerBody.github {
+    background-color: #333;
+}
+
+.providerBody.facebook {
+    background-color: #3b5998;
+}
+
+.providerBody.microsoft {
+    background-color: #f65314;
+}
+
+.providerBody.openweathermap {
+    background-color: #f9a825;
+}
+
+.providerBody.leagueoflegends {
+    background-color: #f9a825;
+}
+
+.providerBody.timeio {
+    background-color: #333;
+}
+
+.providerBody.mailgun {
+    background-color: #EF5858;
+}
+
+.providerBody.airquality {
+    background-color: #5aaf18;
+}
+
+.connectButton {
+    font-size: 22px;
+    color: white;
+    max-width: 300px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.actionSection {
+    background-color: black;
+    text-align: center;
+}
+
+.reactionSection {
+    background-color: black;
+    text-align: center;
+}
+
+.actionReactionTitle {
+    font-size: 50px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.actionReactionItem {
+    font-size: 20px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}

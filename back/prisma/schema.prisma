@@ -1,0 +1,195 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Account {
+  id                 String              @id @default(uuid())
+  userId             String
+  type               String
+  provider           String
+  providerAccountId  String
+  refresh_token      String?
+  access_token       String?
+  expires_at         Int?
+  expires            DateTime?
+  token_type         String?
+  scope              String?
+  id_token           String?
+  session_state      String?
+  spotifyService     SpotifyService?
+  googleService      GoogleService?
+  githubService      githubService?
+  discordService     DiscordService?
+  facebookService    FacebookService?
+  openWeatherService openWeatherService?
+  microsoftService   MicrosoftService?
+  user               User                @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(uuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model User {
+  id              String           @id @default(uuid())
+  name            String?
+  email           String?          @unique
+  emailVerified   DateTime?
+  image           String?
+  accounts        Account[]
+  sessions        Session[]
+  actionReactions ActionReaction[]
+  hash            String?
+  firstName       String
+  lastName        String
+}
+
+model VerificationToken {
+  identifier String   @id @default(uuid())
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model Bookmark {
+  id          Int      @id @default(autoincrement())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @default(now())
+  title       String
+  description String?
+  link        String
+}
+
+model IQuery {
+  id             String           @id @default(uuid())
+  queryProvider  String
+  queryName      String
+  queryParams    Json?
+  ActionReaction ActionReaction[]
+}
+
+model ActionReaction {
+  id               String   @id @default(uuid())
+  userId           String
+  actionEventId    String
+  reactionEventId  String
+  actionProvider   String
+  reactionProvider String
+  actionParams     Json?
+  reactionParams   Json?
+  IQuery           IQuery?  @relation(fields: [iQueryId], references: [id])
+  active           Boolean  @default(true) // Indicates if the rule is active
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @default(now()) @updatedAt
+  user             User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  iQueryId         String?
+
+  @@index([userId]) // Optional: helps with query performance
+}
+
+model SpotifyService {
+  id            String   @id @default(uuid())
+  accountId     String   @unique
+  userId        String
+  playlists     Json[] // Store playlists data as JSON
+  savedAlbums   Json[] // Store saved albums data as JSON
+  savedShows    Json[] // Store saved shows data as JSON
+  savedEpisodes Json[] // Store saved episodes data as JSON
+  savedTracks   Json[] // Store saved tracks data as JSON
+  topArtists    Json[] // Store top artists data as JSON
+  topTracks     Json[] // Store top tracks data as JSON
+  episodeShows  Json[] // Store episode shows data as JSON
+  songs         Json?
+  songsQueue    Json[] // Store songs data as JSON
+  lastSong      String?
+  lastUpdated   DateTime @default(now())
+  account       Account  @relation(fields: [accountId], references: [id], onDelete: Cascade)
+}
+
+model GoogleService {
+  id             String   @id @default(uuid())
+  accountId      String   @unique
+  userId         String
+  activity       Json[]
+  channel        Json[]
+  channelBanner  Json[]
+  channelSection Json[]
+  guideCategory  Json[]
+  i18nLanguage   Json[]
+  i18nRegion     Json[]
+  playlist       Json[]
+  playlistItem   Json[]
+  likedVideos    Json[]
+  searchResult   Json[]
+  subscription   Json[]
+  thumbnail      Json[]
+  video          Json[]
+  videoCategory  Json[]
+  watermark      Json[]
+  lastUpdated    DateTime @default(now())
+  account        Account  @relation(fields: [accountId], references: [id], onDelete: Cascade)
+}
+
+model openWeatherService {
+  id          String   @id @default(uuid())
+  accountId   String   @unique
+  userId      String
+  weather     Json[]
+  lastUpdated DateTime @default(now())
+  account     Account  @relation(fields: [accountId], references: [id], onDelete: Cascade)
+}
+
+model githubService {
+  id               String   @id @default(uuid())
+  accountId        String   @unique
+  userId           String
+  repos            Json[]
+  latestRelease    Json[]
+  reposListOfUser  Json[]
+  latestCommits    Json[]
+  latestRepoEvents Json[]
+  lastUpdated      DateTime @default(now())
+  account          Account  @relation(fields: [accountId], references: [id], onDelete: Cascade)
+}
+
+model DiscordService {
+  id            String   @id @default(uuid())
+  accountId     String   @unique
+  userId        String
+  channelData   Json[]   // Store data related to channels
+  channelDataPing Json[] // Store data related to channel pings
+  lastUpdated   DateTime @default(now())
+  account       Account  @relation(fields: [accountId], references: [id], onDelete: Cascade)
+}
+
+model FacebookService {
+  id          String   @id @default(uuid())
+  accountId   String   @unique
+  userId      String
+  userSecondName   Json[]
+  userFirstName Json[]
+  lastUpdated DateTime @default(now())
+  account     Account  @relation(fields: [accountId], references: [id], onDelete: Cascade)
+}
+
+model MicrosoftService {
+  id          String   @id @default(uuid())
+  accountId   String   @unique
+  userId      String
+  userDisplayName   Json[]
+  calendarEvents Json[]
+  lastUpdated DateTime @default(now())
+  account     Account  @relation(fields: [accountId], references: [id], onDelete: Cascade)
+}

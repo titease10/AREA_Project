@@ -1,0 +1,107 @@
+.body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.providersContainer {
+    background-color: black;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.providersTitle {
+    font-size: 50px;
+    color: white;
+    font-family: 'Roboto';
+    font-weight: bold;
+}
+
+.providerButton {
+    color: white;
+    border-radius: 10px;
+    height: 8vh;
+    width: 80vw;
+    margin: 10px;
+    font-size: 4vh;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    padding: 10px;
+}
+
+.providerButton:hover {
+    background-color: #444;
+    border-color: #1db954;
+}
+
+.providerButtonGoogle {
+    background-color: #db4437;
+}
+
+.providerButtonTwitter {
+    background-color: #1da1f2;
+}
+
+.providerButtonSpotify {
+    background-color: #10be12;
+}
+
+.providerButtonDiscord {
+    background-color: #7289da;
+}
+
+.providerButtonGithub {
+    background-color: #333;
+}
+
+.providerButtonFacebook {
+    background-color: #3b5998;
+}
+
+.providerButtonOpenWeatherMap {
+    background-color: #f9a602;
+}
+
+.providerButtonMicrosoft {
+    background-color: #f65314;
+}
+
+.providerButtonLeagueOfLegends {
+    background-color: #f9a602;
+}
+
+.providerButtonMailgun {
+    background-color: #EF5858;
+}
+
+.providerButtonTimeio {
+    background-color: #333;
+}
+
+.providerButtonSelected {
+    color: white;
+    border-radius: 10px;
+    height: 8vh;
+    width: 80vw;
+    margin: 10px;
+    font-size: 6vh;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    background-color: #444444;
+}

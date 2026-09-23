@@ -1,0 +1,61 @@
+.body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    background-color: black;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-size: 70px;
+    color: white;
+    font-family: 'Roboto';
+    font-weight: bold;
+    margin-bottom: 1vh;
+}
+
+.extraParams {
+    font-size: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.largeButton {
+    color: white;
+    background-color: #444444;
+    border-radius: 10px;
+    height: 8vh;
+    width: 80vw;
+    min-width: 100px; /* Set a minimum width */
+    max-width: 900px;
+    min-height: 50px; /* Set a minimum height */
+    max-height: 300px;
+    margin: 10px;
+    font-size: 4vh;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Reduce the font size when the height of the button exceeds 100px */
+@media (max-height: 200px) {
+    .createButton {
+        font-size: 4vh;
+    }
+}
+
+.icon {
+    margin-right: 10px; /* Adjust this value as needed */
+}

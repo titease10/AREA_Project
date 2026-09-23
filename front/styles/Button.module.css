@@ -1,0 +1,90 @@
+/* Button.module.css */
+/* Button.module.css */
+/* Button.module.css */
+
+.button {
+    /* Existing properties */
+    border: 2px solid var(--button-color, #333333);
+    border-radius: 10px;
+    padding: 0.75rem 1.5rem;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.5rem auto;
+    align-self: center;
+    background-color: #333333;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    display: inline-block;
+
+    /* New properties for button one effect */
+    position: relative;
+    overflow: hidden; /* To contain the pseudo-elements */
+}
+
+.button::before, .button::after {
+    /* Common properties for both pseudo-elements */
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+}
+
+.button::before {
+    /* Specific properties for ::before pseudo-element */
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: rgba(255,255,255,0.5);
+    border-bottom-color: rgba(255,255,255,0.5);
+    transform: scale(0.1, 1);
+    opacity: 0;
+}
+
+.button::after {
+    /* Specific properties for ::after pseudo-element */
+    background-color: rgba(255,255,255,0.1);
+}
+
+.button:hover::before {
+    opacity: 1;
+    transform: scale(1, 1);
+}
+
+.button:hover::after {
+    opacity: 0;
+    transform: scale(0.1, 1);
+}
+
+.button:hover {
+    background-color: #232e3a;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+}
+.button span {
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s;
+}
+
+.buttonWithImage {
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+    width: 3rem;
+    height: 3rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: var(--button-bgImage) no-repeat center/cover;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
