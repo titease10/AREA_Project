@@ -1,0 +1,9 @@
+node_modules/
+front/node_modules/
+back/node_modules/
+back/package-lock.json
+back/.env/
+.idea/
+qodana.yaml
+backend/.env
+!/front/package-lock.json
